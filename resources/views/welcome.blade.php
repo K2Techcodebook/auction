@@ -123,10 +123,12 @@
 
     <!-- PRODUCT SIDESHOW -->
            @include('items')
-        
+    
             <!-- /PRODUCT SHOWCASE -->
 
           </div>
+
+          
 
     <!-- SUBSCRIBE BANNER -->
     <div id="subscribe-banner-wrap">
