@@ -5,6 +5,7 @@
                 <!-- HEADLINE -->
                 <div class="headline primary">
                     <h4>Latest Online Products</h4>
+                    
                     <!-- SLIDE CONTROLS -->
                     <div class="slide-control-wrap">
                         <div class="slide-control left">
