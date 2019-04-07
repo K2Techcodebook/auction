@@ -29,13 +29,18 @@ Route::get('/clear-cache', function() {
 });
 
 Route::post('/register_new_user', 'Auth\RegisterController@createAffiliate')->name('register_new_user');
+
 Route::post('/login', 'Auth\LoginController@affiliateLogin')->name('log_affiliate');
+
+Route::post('/updateProfile', 'HomeController@updateProfile')->name('updateProfile');
 
 
 Route::group(['middleware'=>'auth'], function () {
 	//Get
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-Route::get('/profile/{id?}', 'HomeController@updateprofile')->name('profile');
+Route::get('/profile', 'HomeController@profile')->name('profile');
+
+
 
 
 //Base on user level for now ignore

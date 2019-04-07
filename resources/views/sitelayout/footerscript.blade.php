@@ -22,5 +22,14 @@
 <script src="{{URL::asset('js/home-alerts.js')}}"></script>
 <!-- Footer -->
 <script src="{{URL::asset('js/footer.js')}}"></script>
+<!-- Items Script -->
+<script src="{{URL::asset('js/items.js')}}"></script>
+
+<!-- Alert Message Script -->
+<script src="{{URL::asset('js/alertMessage.js')}}"></script>
+
+
+
+
   </body>
 </html>

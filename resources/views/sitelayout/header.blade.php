@@ -74,7 +74,7 @@
                     <!-- /USER AVATAR -->
 
                     <!-- USER INFORMATION -->
-                    <p class="user-name">Johnny Fisher</p>
+                    <p class="user-name">{{ Auth::user()->username }}</p>
                     <!-- SVG ARROW -->
                     <svg class="svg-arrow">
                         <use xlink:href="#svg-arrow"></use>
@@ -482,7 +482,7 @@
                 <!-- /USER AVATAR -->
 
                 <!-- USER INFORMATION -->
-                <p class="user-name">Johnny Fisher</p>
+                <p class="user-name">{{ Auth::user()->username }}</p>
                 <p class="user-money">$745.00</p>
                 <!-- /USER INFORMATION -->
             </div>
@@ -564,3 +564,5 @@
     <!-- MAIN MENU -->
     <div class="main-menu-wrap">
         <div class="menu-bar">
+
+

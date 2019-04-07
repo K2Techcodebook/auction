@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+//use Appp\User;
 
 class HomeController extends Controller
 {
@@ -26,10 +27,43 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function updateprofile ()
+
+
+    //update user profile
+public function updateProfile (Request $request)
 {
-  $r= Auth::user();
-     return view('pages.profile',compact('r',$r));
+
+
+    
+    $this->validate($request, [
+
+        'first_name' => ['required', 'string'],
+        'last_name' => ['required', 'string'],
+        'country' => ['required', 'string'],
+        'state' => ['required', 'string'],
+
+  ]);
+
+   
+   $user= Auth::user();
+   $user->first_name = $request->input('first_name');
+   $user->last_name = $request->input('last_name');
+   $user->state = $request->input('state');
+   $user->country = $request->input('country');
+   $user->save();
+    
+   return redirect('/profile')->with('success','Success! Profile updated');
 }
+
+
+
+  
+//get user details
+  public function profile ()
+ {
+  $user_details = Auth::user();
+  return view('pages.profile')->with('user_details',$user_details);
+  }
+  
 
 }
