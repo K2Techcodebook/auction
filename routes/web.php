@@ -56,7 +56,8 @@ Route::get('/profile/{id?}', 'HomeController@updateprofile')->name('profile');
 
 //Admin Middleware Only
 Route::group(['middleware'=>'check-permission:admin|superadmin'], function () {
-Route::get('/Category', 'CategorysController@view')->name('Category');
+  Route::get('/Category', 'CategorysController@view')->name('Category');
+  Route::post('/store_industry','CategorysController@store_industry')->name('store_industry');
 });
 
 Auth::routes();
