@@ -36,6 +36,8 @@ class RegisterController extends Controller
            $this->validate($request, [
             'username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'first_name' => ['required', 'string'],
+            'last_name' => ['required', 'string'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
             'country' => ['required', 'string'],
             'state' => ['required', 'string'],
@@ -56,6 +58,8 @@ class RegisterController extends Controller
                 //   'user_id' => $user_id,
                    'username' => $request['username'],
                    'email' => $request['email'],
+                   'first_name' => $request['first_name'],
+                   'last_name' => $request['last_name'],
                     'ip_address' =>  request()->ip(),
                    'password' => Hash::make($request['password']),
                    'country'  => $request['country'],
@@ -64,6 +68,8 @@ class RegisterController extends Controller
                    'token_balance' =>  0,
                
                ]);
+
+               
              return redirect()->intended('login');
 
 

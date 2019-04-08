@@ -18,39 +18,76 @@
                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Enter your email address here...">
                 @if ($errors->has('email'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
+                <strong style="color:red">{{ $errors->first('email') }}</strong>
                 </span>
+                <br/>
+            <br/>
             @endif
-                <label for="username4" class="rl-label">Username</label>
+            
+           
+                <label for="username4" class="rl-label required">Username</label>
                 <input type="text"  class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" placeholder="Enter your username here...">
+               
                 @if ($errors->has('username'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('username') }}</strong>
+                <strong style="color:red">{{ $errors->first('username') }}</strong>
                 </span>
+                <br/>
+            <br/>
             @endif 
+
+                <label for="firstname4" class="rl-label required">First Name</label>
+                <input type="text"   class="form-control{{ $errors->has('first_name') ? ' is-invalid' : '' }}" name="first_name" placeholder="Enter your firstname here...">
+                @if ($errors->has('first_name'))
+                <span class="invalid-feedback" role="alert">
+                    <strong style="color:red">{{ $errors->first('first_name') }}</strong>
+                </span>
+                <br/>
+            <br/>
+            @endif
+
+                <label for="lastname4" class="rl-label required">Last Name</label>
+                <input type="text" name="last_name"  class="form-control{{ $errors->has('last_name') ? ' is-invalid' : '' }}" placeholder="Enter your lastname here...">
+                @if ($errors->has('last_name'))
+                <span class="invalid-feedback" role="alert">
+                <strong style="color:red">{{ $errors->first('last_name') }}</strong>
+                </span>
+                <br/>
+            <br/>
+            @endif
+
                 <label for="password4" class="rl-label required">Password</label>
                 <input type="password" name="password"  class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Enter your password here...">
                 @if ($errors->has('password'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
+                <strong style="color:red">{{ $errors->first('password') }}</strong>
                 </span>
+                <br/>
+            <br/>
             @endif
                 <label for="repeat_password4" class="rl-label required">Repeat Password</label>
                 <input type="password"  name="password_confirmation" placeholder="Repeat your password here...">
+
                 
                 <label for="country" class="rl-label">Country</label>
                 <input type="text"  class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" value="{{ old('country') }}" placeholder="Enter your country here...">
                 @if ($errors->has('country'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('country') }}</strong>
+                <strong style="color:red">{{ $errors->first('country') }}</strong>
                 </span>
+                <br/>
+            <br/>
             @endif 
+
+        
             <label for="state" class="rl-label">State</label>
             <input type="text"  class="form-control{{ $errors->has('state') ? ' is-invalid' : '' }}" name="state" value="{{ old('state') }}" placeholder="Enter your state here...">
             @if ($errors->has('state'))
             <span class="invalid-feedback" role="alert">
-                <strong>{{ $errors->first('state') }}</strong>
+            <strong style="color:red">{{ $errors->first('state') }}</strong>
             </span>
+            <br/>
+            <br/>
         @endif 
                 {{-- <p class="highlighted"><span>Sorry!</span> That email is already registered</p> --}}
 
