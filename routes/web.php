@@ -23,7 +23,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/clear-cache', function() {
    $exitCode =  Illuminate\Support\Facades\Artisan::call('cache:clear');
     $exitCode = Illuminate\Support\Facades\Artisan::call('route:clear');
-        $exitCode = Illuminate\Support\Facades\Artisan::call('config:clear');
+    $exitCode = Illuminate\Support\Facades\Artisan::call('config:clear');
     return $exitCode;
     // return what you want
 });
@@ -41,8 +41,6 @@ Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/profile', 'HomeController@profile')->name('profile');
 
 
-
-
 //Base on user level for now ignore
 
 	Route::get('permissions-all-users',['middleware'=>'check-permission:user|admin|superadmin','uses'=>'HomeController@allUsers']);
@@ -51,12 +49,9 @@ Route::get('/profile', 'HomeController@profile')->name('profile');
 
 	Route::get('permissions-superadmin',['middleware'=>'check-permission:superadmin','uses'=>'HomeController@superadmin']);
 
-
-
 	//Post
-    Route::post('/Update_profile', 'HomeController@Update_profile')->name('Update_profile');
+  Route::post('/Update_profile', 'HomeController@Update_profile')->name('Update_profile');
 });
-
 
 
 //Admin Middleware Only

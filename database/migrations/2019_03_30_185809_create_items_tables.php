@@ -16,7 +16,7 @@ class CreateItemsTables extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('item_name');
-              $table->string('item_img');
+            $table->string('item_img');
             $table->bigInteger('bid_token');
             $table->string('start_time');
             $table->string('end_time');

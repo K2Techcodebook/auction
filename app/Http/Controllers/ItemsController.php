@@ -7,14 +7,9 @@ use Model\items;
 
 class ItemsController extends Controller
 {
- 
  //get prodout   //
-
  public function getItems(){
- $itmes = items::all();
-
-
+   $itmes = items::all();
  }
-
 
 }
