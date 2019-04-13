@@ -37,6 +37,7 @@
         
 
                 @foreach($items as $item)
+                
                 <!-- PRODUCT LIST -->
                 <div id="pl-3" class="product-list grid column4-wrap owl-carousel">
                   
