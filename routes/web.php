@@ -32,11 +32,18 @@ Route::post('/register_new_user', 'Auth\RegisterController@createAffiliate')->na
 
 Route::post('/login', 'Auth\LoginController@affiliateLogin')->name('log_affiliate');
 
-Route::post('/updateProfile', 'HomeController@updateProfile')->name('updateProfile');
+
 
 
 Route::group(['middleware'=>'auth'], function () {
-	//Get
+
+Route::post('/updateProfile', 'HomeController@updateProfile')->name('updateProfile');
+Route::post('/uploadItem', 'ItemsController@uploadItem')->name('uploadItem');
+
+
+    //Get
+Route::get('/manage-items', 'ItemsController@manageItems')->name('manage-items');
+Route::get('/add-items', 'ItemsController@addItems')->name('add-items');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/profile', 'HomeController@profile')->name('profile');
 

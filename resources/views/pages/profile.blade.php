@@ -116,7 +116,7 @@
 						<!-- /INPUT CONTAINER -->
 
 						
-                        <button  class="button mid-short primary">Save Changes</button>
+                        <button  class="button big primary">Save Changes</button>
 
 
 							

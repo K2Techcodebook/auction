@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,13 @@ class items extends Model
    * @var array
    */
   protected $fillable = [
-      'id','item_id', 'item_img', 'bid_token','start_time','end_time'
+      'id','item_name', 'item_img', 'bid_token','start_time','end_time','description','category_id'
   ];
+
+
+ public function itemsImages(){
+  return $this->hasMany('App\Models\items_image','item_id');
+
+ }
+
 }

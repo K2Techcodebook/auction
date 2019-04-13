@@ -32,7 +32,7 @@ class CategorysController extends Controller
        ));
         }
         $message ='Post has been successfully added!';
-      return redirect()->back()->with('status', $message);
+        return redirect()->back()->with('status', $message);
 }
 
 }

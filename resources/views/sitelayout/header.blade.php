@@ -80,7 +80,7 @@
                         <use xlink:href="#svg-arrow"></use>
                     </svg>
                     <!-- /SVG ARROW -->
-                    <p class="user-money">$745.00</p>
+                    <p class="user-money">{{ Auth::user()->token_balance }}</p>
                     <!-- /USER INFORMATION -->
 
                     <!-- DROPDOWN -->
@@ -108,10 +108,10 @@
                         </li>
                         @elseif(checkPermission(['superadmin']))
                       <li class="dropdown-item">
-                            <a href="dashboard-uploaditem.html">Upload Item</a>
+                            <a href="{{route('add-items')}}">Upload Item</a>
                         </li>
                         <li class="dropdown-item">
-                            <a href="dashboard-manageitems.html">Manage Items</a>
+                            <a href="{{route('manage-items')}}">Manage Items</a>
                         </li>
                         <li class="dropdown-item">
                             <a href="{{route('logout') }}" class="button secondary">Logout</a>
@@ -483,12 +483,13 @@
 
                 <!-- USER INFORMATION -->
                 <p class="user-name">{{ Auth::user()->username }}</p>
-                <p class="user-money">$745.00</p>
+                <p class="user-money">{{ Auth::user()->token_balance }}</p>
                 <!-- /USER INFORMATION -->
             </div>
             <!-- /USER QUICKVIEW -->
         </div>
-        <!-- /SIDE MENU HEADER -->
+        <!-- /SIDE MENU HEADER --> 
+
 
         <!-- SIDE MENU TITLE -->
         <p class="side-menu-title">Your Account</p>

@@ -52,7 +52,7 @@ public function updateProfile (Request $request)
    $user->country = $request->input('country');
    $user->save();
     
-   return redirect('/profile')->with('success','Success! Profile updated');
+   return redirect()->back()->with('success','Success! Profile updated');
 }
 
 

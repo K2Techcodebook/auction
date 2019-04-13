@@ -19,7 +19,7 @@
     <!-- /CLOSE BTN -->
 <!-- FORM POPUP CONTENT -->
     <div class="form-popup-content">
-        <h4 class="popup-title">    {{ __('Login') }} to your Account</h4>
+        <h4 class="popup-title">    ADD A CATEGORY </h4>
         <div class="col-lg-10 col-lg-offset-2">
                                    @if (session('status'))
 
