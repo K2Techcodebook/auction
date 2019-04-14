@@ -1,22 +1,20 @@
 @include('sitelayout.header')
+  @include('sitelayout.nav')
 
+    <!-- <div class="content-wrapper"> -->
+    <!-- Main content -->
+         <!-- <section class="content"> -->
 
-            @include('sitelayout.nav')
+       @yield('content')
+       <!-- About Section -->
 
-                              <!-- <div class="content-wrapper"> -->
-                                <!-- Main content -->
-                                     <!-- <section class="content"> -->
+    <!-- <section id="profile" class="signup-section">
+    </section> -->
+         @yield('footer')
+      <!-- </section>
+    </div>
+    <br> -->
 
-                                   @yield('content')
-                                   <!-- About Section -->
-
-              <!-- <section id="profile" class="signup-section">
-              </section> -->
-                                     @yield('footer')
-                                  <!-- </section>
-                           </div>
-                      <br> -->
-
-            @include('sitelayout.footer')
+  @include('sitelayout.footer')
 
 @include('sitelayout.footerscript')

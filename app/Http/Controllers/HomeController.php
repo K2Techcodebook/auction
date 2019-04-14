@@ -17,32 +17,27 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view('home');
-    }
+  /**
+   * Show the application dashboard.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
+  {
+      return view('home');
+  }
 
-
-
-    //update user profile
-public function updateProfile (Request $request)
-{
-
-
-    
-    $this->validate($request, [
-
+  //update user profile
+  public function updateProfile (Request $request)
+  {
+      $this->validate($request, [
         'first_name' => ['required', 'string'],
         'last_name' => ['required', 'string'],
         'country' => ['required', 'string'],
         'state' => ['required', 'string'],
+      ]);
 
-  ]);
+  
 
    
    $user= Auth::user();
@@ -55,15 +50,13 @@ public function updateProfile (Request $request)
    return redirect()->back()->with('success','Success! Profile updated');
 }
 
+ 
 
-
-  
 //get user details
   public function profile ()
- {
-  $user_details = Auth::user();
-  return view('pages.profile')->with('user_details',$user_details);
+  {
+    $user_details = Auth::user();
+    return view('pages.profile')->with('user_details',$user_details);
   }
-  
 
 }
