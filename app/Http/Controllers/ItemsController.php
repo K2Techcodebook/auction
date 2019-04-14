@@ -11,25 +11,25 @@ class ItemsController extends Controller
 {
 public $time;
 
-
- 
       /**
  * Create a new controller instance.
  *
  * @return void
  */
 public function __construct()
-{  
+{
     $this->middleware('auth');
     $this->time = time();
 }
 
+// all items
+public function index(){ return Categorys::with('items')->get(); }
 
- //show items 
+ //show items
  public function manageItems(){
 
  $items = items::all();
- 
+
  return view('pages.manageItems')->with('items',$items);
 
  }
@@ -37,7 +37,7 @@ public function __construct()
  //get prodout   //
 
  public function addItems(){
- 
+
   //get the products catergories
 
  $categories = Categorys::all();
@@ -48,11 +48,11 @@ public function __construct()
  }
 
 
- 
-//upload product 
+
+//upload product
 public function uploadItem(Request $request){
 
-   
+
  $this->validate($request, [
 
     'category_id' => ['required', 'string'],
@@ -71,25 +71,25 @@ public function uploadItem(Request $request){
  //check if start_time is greater than time
 
  if(strtotime($request->input('start_time')) <= $this->time){
-  
+
    return redirect()->back()->with('error','Start time must be ahead of current time');
  }
 
- 
- //check the start time and end time 
+
+ //check the start time and end time
  if(strtotime($request->input('end_time')) <=  strtotime($request->input('start_time'))){
 
    return redirect()->back()->with('error','Start time must be ahead of end time');
-   
+
 }
-   
+
 
 
 
 
 
 //save the data to the db
- 
+
   $items = items::create([
   'item_name' => $request['item_name'],
   'category_id' => $request['category_id'],
@@ -97,11 +97,11 @@ public function uploadItem(Request $request){
   'start_time' => strtotime($request['start_time']),
   'end_time' => strtotime($request['end_time']),
   'description' => $request['description'],
-  
-  ]);
-  
 
-  
+  ]);
+
+
+
 //try to upload item image
 if($request->hasFile('file')){
 
@@ -112,10 +112,10 @@ foreach($request->file as $file){
 $fileName =  $this->time.$file->getClientOriginalName();
 
 //store the file
-  
+
 $file->storeAs('public/items',$fileName);
 
-//save the image link 
+//save the image link
 $items->itemsImages()->create(['image'=>$fileName]);
 
 
@@ -123,24 +123,22 @@ $items->itemsImages()->create(['image'=>$fileName]);
 
 
 
- 
+
 
 
 
 }
 
 
-  
-  
+
+
 
 
 
 
  return redirect()->back()->with('success','Success! New item added');
-    
-}
-
 
 }
 
 
+}

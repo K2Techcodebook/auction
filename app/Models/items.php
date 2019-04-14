@@ -18,7 +18,14 @@ class items extends Model
 
  public function itemsImages(){
   return $this->hasMany('App\Models\items_image','item_id');
+ }
 
+ public function categorys(){
+   return $this->belongsTo(Categorys::class);
+ }
+
+ public function items_image(){
+   return $this->hasOne(items_image::class);
  }
 
 }

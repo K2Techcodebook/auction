@@ -19,8 +19,6 @@ class items_image extends Model
 
 
     public function items(){
-        
-    return $this->belongsTo('App\Models\items');
-      
+      return $this->belongsTo('App\Models\items');
     }
 }

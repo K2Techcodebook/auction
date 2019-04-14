@@ -42,6 +42,7 @@ Route::post('/uploadItem', 'ItemsController@uploadItem')->name('uploadItem');
 
 
     //Get
+Route::get('/items', 'ItemsController@index')->name('items');
 Route::get('/manage-items', 'ItemsController@manageItems')->name('manage-items');
 Route::get('/add-items', 'ItemsController@addItems')->name('add-items');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');

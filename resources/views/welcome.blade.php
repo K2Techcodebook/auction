@@ -2,7 +2,7 @@
 
  @include('sitelayout.nav')
    @yield('content')
- 
+
 
     <!-- BANNER -->
     <div class="banner-wrap">
@@ -125,12 +125,12 @@
 
     <!-- PRODUCT SIDESHOW -->
            @include('items')
-    
+
             <!-- /PRODUCT SHOWCASE -->
 
           </div>
 
-    
+
 
     <!-- SUBSCRIBE BANNER -->
     <div id="subscribe-banner-wrap">
@@ -158,9 +158,10 @@
         </div>
     </div>
     <!-- /SUBSCRIBE BANNER -->
-      @yield('footer')
+@yield('footer')
 
 
-            @include('sitelayout.footer')
+@include('sitelayout.footer')
 
 @include('sitelayout.footerscript')
+@yield('js')

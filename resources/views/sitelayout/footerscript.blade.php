@@ -1,5 +1,5 @@
  <!--  <script src="{{ asset('home/js/all.js') }}" defer></script>  -->
-     
+
 <!-- jQuery -->
 <script src="{{URL::asset('js/vendor/jquery-3.1.0.min.js')}}"></script>
 <!-- Tooltipster -->
@@ -27,10 +27,3 @@
 
 <!-- Alert Message Script -->
 <script src="{{URL::asset('js/alertMessage.js')}}"></script>
-
-
-
-
-
-  </body>
-</html>
