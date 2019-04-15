@@ -4,7 +4,7 @@
 @section('title') Manage Items @endsection
 
 @section('content')
-     
+
        <div id="product-sideshow-wrap">
         <div id="product-sideshow">
             <!-- PRODUCT SHOWCASE -->
@@ -12,7 +12,7 @@
                 <!-- HEADLINE -->
                 <div class="headline primary">
                     <h4>Latest Online Products</h4>
-                    
+
                     <!-- SLIDE CONTROLS -->
                     <div class="slide-control-wrap">
                         <div class="slide-control left">
@@ -34,13 +34,13 @@
                     <!-- /SLIDE CONTROLS -->
                 </div>
                 <!-- /HEADLINE -->
-        
+
 
                 @foreach($items as $item)
-                
+
                 <!-- PRODUCT LIST -->
                 <div id="pl-3" class="product-list grid column4-wrap owl-carousel">
-                  
+
 
                     <!-- PRODUCT ITEM -->
                     <div class="product-item column">
@@ -152,11 +152,11 @@
                 </div>
                 <!-- /PRODUCT LIST -->
             </div>
-
+          </div>
+          </div>
             @endforeach
-            </div>
-            </div>
-        
+          
+
   @endsection
 
 
@@ -164,6 +164,3 @@
 
 
 @endsection
-
-
-

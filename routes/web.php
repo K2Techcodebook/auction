@@ -39,7 +39,7 @@ Route::group(['middleware'=>'auth'], function () {
 
 Route::post('/updateProfile', 'HomeController@updateProfile')->name('updateProfile');
 Route::post('/uploadItem', 'ItemsController@uploadItem')->name('uploadItem');
-
+Route::get('/item/{name?}/{id?}', 'HomeController@load_items')->name('view_items');
 
     //Get
 Route::get('/items', 'ItemsController@index')->name('items');

@@ -19,119 +19,15 @@
 						<div class="content-dropdown">
 							<!-- FEATURE LIST BLOCK -->
 							<div class="feature-list-block">
-								<h6 class="feature-list-title">Emerald Dragon</h6>
-								<hr class="line-separator">
-								<!-- FEATURE LIST -->
-								<ul class="feature-list">
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="{{ url('/') }}">Homepage V1</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
+								<!-- <h6 class="feature-list-title">Emerald Dragon</h6>
+								<hr class="line-separator"> -->
 
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="home-v2.html">Homepage V2</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
+							@include('layouts.navlist')
 
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="itemview-versions.html">Item View Versions</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="shop-gridview-v1.html">Shop Grid View V1</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="shop-gridview-v2.html">Shop Grid View V2</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="shop-listview-v1.html">Shop List View V1</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="shop-listview-v2.html">
-											Shop List View V2
-											<!-- PIN -->
-											<span class="pin primary">hot</span>
-											<!-- /PIN -->
-										</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<li class="feature-list-item">
-										<a href="author-profile.html">Profile Page</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-								</ul>
-								<!-- /FEATURE LIST -->
-
-								<!-- FEATURE LIST -->
-								<ul class="feature-list">
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="blog-v1.html">Blog Page V1</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="blog-v2.html">Blog Page V2</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="open-post.html">Open Post</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="forum.html">Forum Board</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="subforum.html">Subforum</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="open-topic.html">Open Topic</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="login-register.html">Login and Register</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-
-									<!-- FEATURE LIST ITEM -->
-									<li class="feature-list-item">
-										<a href="menu-dropdowns.html">Menu and Dropdowns</a>
-									</li>
-									<!-- /FEATURE LIST ITEM -->
-								</ul>
-								<!-- /FEATURE LIST -->
 							</div>
 							<!-- /FEATURE LIST BLOCK -->
 
-							
+
 						</div>
 					</li>
 					<!-- /MENU ITEM -->
@@ -155,4 +51,3 @@
 		</div>
 	</div>
 	<!-- /SECTION HEADLINE -->
-
